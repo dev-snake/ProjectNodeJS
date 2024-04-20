@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f6f6;
+}
+
+section {
+    width: 100%;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.card-left {
+    width: 500px;
+    height: 640px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 1px 1px 2px 2px #f3f2f2;
+}
+
+.card-right {
+    width: 900px;
+    height: 640px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 1px 1px 2px 2px #f3f2f2;
+}
+
+.card-list {
+    position: relative;
+    margin: 90px auto;
+    width: 90%;
+    text-align: center;
+
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid #eee;
+
+}
+
+tr th,
+td {
+    height: 50px;
+
+}
+
+.bx-dots-vertical-rounded {
+    position: relative;
+    font-size: 1.3rem;
+    background: #eee;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.option-crud {
+    display: none;
+    width: 100px;
+
+    position: absolute;
+    z-index: 10;
+    background: #fff;
+    right: 70px;
+
+    box-shadow: 2px 2px 2px 2px #f3f2f2;
+}
+
+
+
+.option-crud span {
+    display: block;
+    padding: 5px;
+}
+
+#add-item {
+    float: right;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    border: none;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    background: #1f1f1f;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.card-item {
+    width: 424px;
+
+    margin: 2.5rem auto;
+    padding: 10px;
+}
+
+.card-item h3 {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+}
+
+.card-item form input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px 2px #f3f2f2;
+
+}
+
+form label {
+    font-size: 1rem;
+}
+
+#btn {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: #1f1f1f;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}

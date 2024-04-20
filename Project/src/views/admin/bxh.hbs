@@ -1,0 +1,30 @@
+<section>
+    <div id="bxh">
+        <p class="title_infor">Bảng xếp hạng điểm tiêu dùng</p>
+        <div class="container_table">
+            <table class="container_list">
+                <thead id="table_head">
+                    <tr>
+                        <th>Hạng</th>
+                        <th>Hình đại diện</th>
+                        <th>Username</th>
+                        <th>Điểm tiêu dùng</th>
+                    </tr>
+                </thead>
+                <tbody id="table_body">
+                    {{#each userSort}}
+                        <tr>
+                            <td id="rank">{{@index}}</td>
+                            <td>
+                                <img src="../img/{{this.userImage}} " alt="" id="userImageBxh" />
+                            </td>
+                            <td>{{this.username}} </td>
+                            <td>{{this.point}} </td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</section>

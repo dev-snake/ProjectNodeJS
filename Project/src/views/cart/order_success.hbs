@@ -1,0 +1,23 @@
+<section id="order_success">
+	<div class="box_order_success">
+		<div class="box_success_primary">
+			<p class="title_order_success"><strong>Đặt hàng thành công</strong></p>
+			<span>Mã đơn hàng : <strong>{{order_id}}</strong></span>
+			<span>Ngày đặt hàng : <strong>{{orderDate}}</strong></span>
+			<span>Người nhận : <strong>{{fullname}}</strong></span>
+			<span>Số điện thoại <strong>{{phonenumber}}</strong></span>
+			<span>Địa chỉ nhận hàng :
+				<strong>{{city}}</strong>
+				,
+				<strong>{{district}}</strong>
+			</span>
+			<span>Hình thức thanh toán : <strong>{{paymentMethod}}</strong> </span>
+			<span>Tổng tiền :<strong> {{total}} $</strong></span>
+			<div class="box_qr_code">
+				<p>Vui lòng quét mã để thanh toán </p>
+				<img src={{link_icon}} alt="" id="icon_paymentMethod" />
+				<img src="{{qrCode}}" alt="qr_code" />
+			</div>
+		</div>
+	</div>
+</section>

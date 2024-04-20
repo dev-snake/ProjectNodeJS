@@ -1,0 +1,98 @@
+<section id="payment_infor">
+    <div id="block_infor_title">
+        <p>Thông tin : </p>
+    </div>
+    <form action="/cart/infor_older/" method="POST">
+        <div class="block_infor">
+            {{! View list }}
+            <div class="view_list">
+                <div class="view_list_wrapper">
+                    {{#each cartItems}}
+                        <div class="item">
+                            <img src="../img/{{this.image}}" alt="" class="payment_img" />
+                            <div class="item_infor">
+                                <span class="item_name">Tên sản phẩm : {{this.name}}</span>
+                                <div class="box_price_quantity">
+                                    <span>Giá 1 sản phẩm : {{this.price}} $</span>
+                                    <span class="item_price">Giá tổng sản phẩm :
+                                        {{this.total}}
+                                        $</span>
+                                    <span class="item_quantity">Số lượng : {{this.quantity}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+
+                </div>
+            </div>
+            {{! View list }}
+            <div class="block_customer">
+                <p>Thông tin khách hàng</p>
+                <div class="block_customer_wrapper">
+                    <div class="block_customer_main">
+                        <label for="">Họ và tên :</label>
+                        <input
+                            type="text"
+                            class="customer_input1"
+                            placeholder="Họ và tên"
+                            id="fullname"
+                            name="fullname"
+                        />
+                        <label for="">Số điện thoại :</label>
+
+                        <input
+                            type="text"
+                            class="customer_input2"
+                            placeholder="Số điện thoại"
+                            id="phonenumber"
+                            name="phonenumber"
+                        />
+                        <label for="">Email :</label>
+
+                        <input
+                            type="text"
+                            class="customer_input3"
+                            placeholder="Email của bạn "
+                            id="email"
+                            name="email"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="block_payment">
+                <p class="block_infor_title">Thông tin nhận hàng : </p>
+                <div class="block_payment_wrapper">
+                    <div class="block_payment_city">
+                        <p>Tỉnh thành phố : </p>
+                        <select name="city" id="city">
+                            <option value="">Chọn 1 thành phố</option>
+                        </select>
+                    </div>
+                    <div class="block_payment_district">
+                        <p>Quận huyện : </p>
+                        <select name="district" id="district">
+                            <option value="">Chọn 1 Quận Huyện</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="block_customer_note">
+                    <label for="">Ghi chú : </label>
+                    <input
+                        type="text"
+                        class="customer_note"
+                        name="customer_note"
+                        placeholder="Ghi chú"
+                    />
+                </div>
+            </div>
+            <div class="container_total_payment">
+                <div class="total_box">
+                    <span class="total_temp">Tổng tiền tạm tính : </span>
+                    <span class="total">{{sum}} $</span>
+                </div>
+                <button class="btn_payment" type="submit">Tiếp tục</button>
+                <button class="choose_more">Chọn thêm sản phẩm khác</button>
+            </div>
+        </div>
+    </form>
+</section>

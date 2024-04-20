@@ -1,0 +1,71 @@
+<section id="profile" class="profile">
+    <form
+        class="contentProfile"
+        method="POST"
+        action="/profile/updateProfile/{{userProfile._id}}"
+        enctype="multipart/form-data"
+    >
+        <div id="inforUser">
+            <img src="../img/{{userProfile.userImage}}" alt="" name="userImage" id="userImage" /><br
+            />
+
+            <input
+                type="text"
+                value="{{userProfile.username}}"
+                name="username"
+                class="username"
+                disabled
+            />
+            <input
+                type="text"
+                value="Point : {{userProfile.point}}"
+                name="username"
+                class="username"
+                disabled
+            />
+            <i class="bx bxl-bitcoin" id="bxl-bitcoin"></i>
+
+        </div>
+        <input
+            type="text"
+            placeholder="Họ và tên"
+            name="fullname"
+            class="fullname inputProfile"
+            value="{{userProfile.fullname}}"
+        />
+        <hr id="lineProfile" />
+        <input
+            type="email"
+            placeholder="Email:"
+            name="email"
+            class="email inputProfile"
+            value="{{userProfile.email}}"
+        />
+        <hr id="lineProfile" />
+
+        <input
+            type="text"
+            placeholder="Địa chỉ"
+            name="address"
+            class="address inputProfile"
+            value="{{userProfile.address}}"
+        />
+        <hr id="lineProfile" />
+        <div class="check_eye">
+            <input
+                type="password"
+                placeholder="Đổi mật khẩu"
+                class="changePassword inputProfile"
+                name="password"
+                value=""
+                id="password-input"
+                disabled
+            />
+            <i class="fa-regular fa-eye"></i>
+            <i class="fa-solid fa-eye-slash" id="fa-eye-slash"></i>
+            <a href="/profile/changePassword"><i class="fa-regular fa-pen-to-square"></i></a>
+        </div>
+        <hr id="lineProfile" />
+        <button id="updateProfile" type="submit">Cập nhật thông tin</button>
+    </form>
+</section>

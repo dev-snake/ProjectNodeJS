@@ -1,0 +1,29 @@
+<section id="login">
+    <div class="container-login">
+        <div class="item1">
+            <img src="../img/home.png" alt="" />
+        </div>
+        <div class="item2">
+            <div class="item-right">
+                <h2>Login</h2>
+                <span class="geeting">Welcome to my wedsite !</span>
+                <form class="form-login" method="POST" action="login/handleLogin">
+                    <input type="text" placeholder="Enter Username" name="username" />
+                    <input type="password" placeholder="Enter password" name="password" />
+
+                    <button id="btnSignIn" type="submit">Sign In</button>
+                    <div class="forgetPassword">
+                        <span class="link">Don't have Account?
+                            <a href="/auth/signup">SignUp</a></span>
+                        <a href="/auth/restore-password"><span>Forgot password ?</span></a>
+                    </div>
+                </form>
+                <div class="option-login">
+                    <a href="/auth/google"><button><i class="bx bxl-google"></i>
+                            Continue with Google</button></a>
+                    <button><i class="bx bxl-twitter"></i>Continue with Twiter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

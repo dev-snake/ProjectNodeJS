@@ -1,0 +1,48 @@
+<header>
+    <a href="/" class="logo"><img src="../../img/logo.png" alt="ảnh lỗi" /></a>
+    <i class="bx bx-menu" id="icon-menu"></i>
+    <ul class="navbar">
+        <li><a href="/">Trang chủ</a></li>
+        <li><a href="/products">Sản phẩm</a></li>
+        <li><a href="/news">Tin tức</a></li>
+
+    </ul>
+    <div class="search-box">
+        <form class="search-box-child" method="get" action="">
+            <input
+                type="seach"
+                class="search-txt search-input"
+                name="search"
+                placeholder="Search"
+            />
+            <input type="submit" value="OK" id="btn-search" />
+        </form>
+    </div>
+    <div class="header-icons">
+        {{! <i class="fa-solid fa-truck-fast"></i>
+        <p class="look-up-order">Tra cứu đơn hàng</p> }}
+        <i class="bx bx-search"></i>
+        {{#if isLoggedIn}}
+            <span id="icon-user"><p class="text_typing">{{username}}</p></span>
+        {{else}}
+            <span id="icon-user" class="icon-user">Login</span>
+        {{/if}}
+    </div>
+    <div class="box-auth" id="box-auth">
+        {{!-- {{#if isLoggedIn isLoggedInGoogle}} --}}
+        {{#if isLoggedIn}}
+            <a href="/auth/logout"><span id="logout"><i class="bx bxs-log-out"></i>Đăng Xuất</span></a>
+            <a href="/profile"><span class="profile"><i class="bx bxs-user-account"></i>Hồ sơ</span></a>
+            <a href="/profile/my_order"><span class="myOlder"><i class="bx bxs-cart"></i>
+                    Đơn hàng</span></a>
+            <a href="/profile/exchange">
+                <span class="exchange"><i class="fa-solid fa-rotate"></i> Đổi điểm</span>
+            </a>
+            <a href="/cart"><span class="profile"><i class="bx bx-cart-add"></i>Giỏ hàng </span></a>
+        {{else}}
+            <a href="/auth/login"><span><i class="bx bx-log-in"></i> Đăng Nhập</span></a>
+            <a href="/auth/signup"><span><i class="bx bx-user-plus"></i> Đăng kí</span></a>
+        {{/if}}
+
+    </div>
+</header>

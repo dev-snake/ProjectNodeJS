@@ -1,0 +1,19 @@
+<section id="resultSearch" class="resultSearch">
+    <p id="searchResult"> <strong>Kết quả tìm kiếm 🔎 :</strong> {{search}}</p>
+    <div class="box-container">
+        {{#each relatedProducts}}
+            <div class="box">
+                <form method="POST" action="/cart/addToCart/{{this._id}}">
+                    <div class="box-image">
+                        <a href="/product/{{this.slug}}">
+                            <img src="../img/{{this.image}}" alt="" /></a>
+                    </div>
+                    <span class="price text">Giá : {{this.price}}$</span>
+                    <a href="/product/{{this.slug}}">
+                        <span class="name text">Tên sản phẩm : {{this.name}}</span></a>
+                    <button id="btn" type="submit">Mua ngay</button>
+                </form>
+            </div>
+        {{/each}}
+    </div>
+</section>

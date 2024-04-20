@@ -1,0 +1,21 @@
+<section id="my_order">
+	<div id="box_order" class="order_detail">
+		<div id="box_state" class="head_orderDetail">
+			<p class="title_orderDetail">Chi Tiết đơn hàng</p>
+			<a href="/admin/order_manager/">Quan lại</a>
+		</div>
+		{{#each custommerOfOrder}}
+			<div class="orderList">
+				<img
+					src="../../img/{{this.image}}"
+					alt="Product Image"
+					width="100px"
+					height="100px"
+				/>
+				<span id="text">{{this.name}}</span>
+				<span>Số lượng: {{this.quantity}}</span>
+				<span>Giá:{{this.price}} $</span>
+			</div>
+		{{/each}}
+	</div>
+</section>

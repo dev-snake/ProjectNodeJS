@@ -1,0 +1,59 @@
+body {
+    background: white !important;
+}
+
+.profile {
+    margin-top: 5rem;
+    width: 100%;
+}
+
+.contentProfile {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contentProfile input {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    outline: none;
+    height: 50px;
+    caret-color: #e0052b;
+    font-size: 1rem;
+
+}
+
+#lineProfile {
+    border: 1px solid #eee;
+}
+
+#updateProfile {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    background: #1f1f1f;
+    color: white !important;
+    font-weight: 600;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+#userImage {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    text-align: center;
+    background: rgb(241, 150, 150);
+    border-radius: 50%;
+
+}
+
+#inforUser {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 2rem;
+}

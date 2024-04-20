@@ -1,0 +1,42 @@
+<section>
+	<div id="order_list">
+		<p class="title_infor">Thông tin đơn hàng</p>
+		<div class="container_table">
+			<table class="container_list" border="1">
+				<thead id="table_head">
+					<tr>
+						<th>Họ và tên</th>
+						<th>email</th>
+						<th>Địa chỉ</th>
+						<th>Phương thức thanh toán</th>
+						<th>Tổng tiền</th>
+						<th>Ngày đặt hàng</th>
+						<th>Trạng thái</th>
+						<th>Chi tiết đơn hàng</th>
+						<th>Xác nhận</th>
+					</tr>
+				</thead>
+				<tbody id="table_body">
+					{{#each orderList}}
+						<tr>
+							<td>{{this.fullname}}</td>
+							<td> <span id="text_email">{{this.email}}</span></td>
+							<td>{{this.district}} </td>
+							<td>{{this.paymentMethod}}</td>
+							<td>{{this.total}} $</td>
+							<td>{{this.orderDate}}</td>
+							<td><span class="order_status"> {{this.order_status}}</span> </td>
+							<td>
+								<span id="text">
+									<a href="/admin/order_manager/{{this._id}}">xem chi tiết</a>
+								</span></td>
+							<form action="/admin/order_manager/{{this._id}}" method="POST">
+								<td><button class="order_confirm">Xác thực</button></td></form>
+						</tr>
+					{{/each}}
+				</tbody>
+
+			</table>
+		</div>
+	</div>
+</section>

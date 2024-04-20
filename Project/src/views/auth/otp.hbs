@@ -1,0 +1,15 @@
+<section id="restore-password">
+	<div class="restore_password_page">
+		<form class="cps_container" method="POST" action="/auth/cofirmOtp">
+			<p class="title_forgot_password">Quên Mật khẩu</p>
+			<p class="message_otp">Nhập mã OTP được gửi qua.</p>
+			<div class="restore_input">
+				<label for="">OTP : </label>
+				<input type="hidden" name="otp" value="{{otp}}" />
+				<input type="hidden" name="email" value="{{email}}" />
+				<input type="text" name="customersOtp" />
+				<button class="continue" type="submit">Xác nhận</button>
+			</div>
+		</form>
+	</div>
+</section>

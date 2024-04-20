@@ -1,0 +1,42 @@
+<section id="exchangeVoucher">
+    <div class="PageLayout_header">
+        <div class="ShopBannerSummary">
+            <div class="ShopBannerSummary-vouchers">
+                <div class="ShopBannerSummary-vouchers-title">
+                    <span class="sp-title-point"> Points :</span>
+                </div>
+                <div class="ShopBannerSummary-vouchers-data">{{point}}
+                    <i class="bx bxl-bitcoin"></i></div>
+            </div>
+            <div class="ShopBannerSummary-my-voucher">
+                <a class="sp-my-voucher" href=""> My Voucher</a>
+            </div>
+        </div>
+    </div>
+    <div class="PageLayout_content">
+        <div class="ShopItemListView">
+            <div class="ShopItemListView-list" id="MyVoucher-list">
+
+                {{#each voucherList}}
+                    <div class="ShopItemCard">
+                        <img src="../../img/{{this.image}}" alt="" class="ShopItemCard-image" />
+                        <div class="ShopItemCard-main">
+                            <div class="ShopItemCard-title">{{this.title}}</div>
+                        </div>
+                        <div class="ShopItemCard-footer">
+                            <input
+                                type="text"
+                                class="voucherInput"
+                                value="{{this.voucher_code}}"
+                                name="coppied"
+                                disabled
+                            />
+                            <button class="btn-copy">copy</button>
+                        </div>
+                    </div>
+                {{/each}}
+
+            </div>
+        </div>
+    </div>
+</section>

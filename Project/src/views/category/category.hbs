@@ -1,0 +1,48 @@
+<section id="categories">
+	<div class="cps-container">
+		<div class="tab_categories">
+			<a href="/products" class="item_tab">Tai nghe</a>
+			{{#each categoryList}}
+				<a href="/products/{{this.category_id}}" class="item_tab">{{this.category_name}}</a>
+
+			{{/each}}
+		</div>
+		<div class="block_filter_sort">
+			<p class="title_sort">Sắp xếp theo</p>
+			<div class="filter_list">
+				<a href="products/high_to_low" class="btn_filter button_sort"><i
+						class="fa-solid fa-arrow-down-a-z"
+					></i>
+					Giá cao đến thấp</a>
+				<a href="products/low_to_high" class="btn_filter button_sort"><i
+						class="fa-solid fa-arrow-up-a-z"
+					></i>
+					Giá thấp đến cao
+				</a>
+				<a href="" class="btn_filter button_sort"><i class="fa-solid fa-eye"></i>
+					Xem nhiều</a>
+				<a href="" class="btn_filter button_sort"><i class="fa-solid fa-bookmark"></i>
+					Bán chạy</a>
+			</div>
+		</div>
+		<div class="filter_list_product">
+			<div class="box-container">
+				{{#each productList}}
+					<div class="box">
+						<form method="POST" action="/cart/addToCart/{{this._id}}">
+							<div class="box-image">
+								<a href="/product/{{this.slug}}">
+									<img src="../img/{{this.image}}" alt="" /></a>
+							</div>
+							<span class="price text">Giá : {{this.price}}$</span>
+							<a href="/product/{{this.slug}}">
+								<span class="name text">Tên sản phẩm : {{this.name}}</span></a>
+							<button id="btn" type="submit">Mua ngay</button>
+						</form>
+					</div>
+				{{/each}}
+
+			</div>
+		</div>
+	</div>
+</section>

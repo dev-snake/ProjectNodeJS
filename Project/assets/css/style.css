@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #eee;
+}
+
+:root {
+    --main-color: #1E1E1E;
+    --text-color: #fff;
+    --border-radius: 0.5rem;
+    --second-color: #eee;
+}
+
+section {
+    padding: 30px 100px;
+
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    background: #eeeeee91;
+    padding: 15px 100px;
+    align-items: center;
+    z-index: 10;
+    filter: blur(0.5px);
+}
+
+.box-auth {
+    z-index: 11;
+    position: absolute;
+    top: 5rem;
+    /* right: 6.5rem; */
+    right: -200px;
+    background: var(--text-color);
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px var(--second-color);
+    display: none;
+}
+
+.box-auth.active {
+    right: 6.5rem;
+    display: block;
+}
+
+.box-auth span {
+    display: block;
+    border-bottom: 0.1px solid;
+    margin: 4px 0;
+    padding: 4px;
+    opacity: 0.9;
+    font-weight: 500;
+
+}
+
+.box-auth span:hover {
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar li {
+    padding: 0 15px;
+}
+
+#icon-menu {
+    display: none;
+}
+
+.navbar li a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.header-icons span {
+    background: var(--main-color);
+    color: var(--text-color);
+    padding: 8px;
+    font-size: 20px;
+    border-radius: var(--border-radius);
+    margin: 0 5px;
+}
+
+.service .title {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.container-service {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.service-icon {
+    width: 400px;
+    background: #eee;
+    padding: 20px;
+    border-radius: var(--border-radius);
+}
+
+.service-icon img {
+    width: 70px;
+    height: 60px;
+    object-fit: contain;
+
+}
+
+.home {
+    background: var(--main-color);
+    width: 1700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6rem;
+    height: 600px;
+    border-radius: var(--border-radius);
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home-infor {
+    width: 500px;
+    height: 380px;
+}
+
+.home-image img {
+    width: 500px;
+    height: 380px;
+    object-fit: cover;
+}
+
+.home-infor .title,
+.price-home,
+.description {
+    color: var(--text-color);
+    padding: 5px;
+    letter-spacing: 1.2px;
+    font-size: 2rem;
+}
+
+.home-infor .btn {
+    padding: 10px;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 3px;
+    margin-top: 10px;
+    background: #000;
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+.home-infor .btn i {
+    font-weight: 600;
+
+}
+
+#product .title {
+    padding: 10px;
+    background: var(--main-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    margin-left: 3px;
+    opacity: 0.9;
+}
+
+.box {
+    max-width: 300px;
+    margin-top: 30px;
+    background: var(--second-color);
+    padding: 10px;
+    border-radius: var(--border-radius);
+}
+
+.box span {
+    display: block;
+}
+
+.box-image {
+    width: 100%;
+    background: var(--text-color);
+    text-align: center;
+    border-radius: var(--border-radius);
+}
+
+.box-image img {
+    width: 120px;
+    padding: 10px;
+    height: 160px;
+    object-fit: cover;
+}
+
+#btn {
+    width: 100%;
+    border: none;
+    background: var(--main-color);
+    color: var(--text-color);
+    padding: 8px;
+    border-radius: var(--border-radius);
+    margin-top: 4px;
+    letter-spacing: 1.1px;
+}
+
+#btn:hover {
+    cursor: pointer;
+}
+
+.box .price {
+    font-size: 1.1rem;
+    margin-top: 2px;
+}
+
+.box-container {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+#footer {
+    width: 100%;
+    background: var(--main-color);
+    margin-top: 10px;
+}
+
+#footer span {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: var(--text-color);
+}
+
+/* login */
+
+.container-login {
+    max-width: 960px;
+    height: 704px;
+    background: #fff;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: 480px 480px;
+    box-shadow: 2px 2px 2px 2px #dddada;
+    flex-wrap: wrap;
+}
+
+.item1 {
+    background: #1E1E1E;
+    display: flex;
+    align-items: center;
+}
+
+.item1 img {
+    width: 100%;
+    display: block;
+    filter: drop-shadow(8px 8px 10px rgba(226, 222, 222, 0.3));
+
+}
+
+
+
+.item-right {
+    width: 355px;
+    padding: 10px;
+    margin: 60px auto;
+    overflow: hidden;
+
+}
+
+.item-right h2 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+
+}
+
+.geeting {
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+.form-login {
+    width: 100%;
+}
+
+.form-login input {
+    width: 100%;
+    margin: 15px 0;
+    height: 40px;
+    padding: 5px;
+    border: 2px solid #eee;
+    outline: none;
+    border-radius: 8px;
+}
+
+form #btnSignIn {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: #1E1E1E;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.option-login button {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    border: 2px solid #eee;
+    height: 40px;
+    background: #fff;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.form-login .link {
+    font-size: 1rem;
+    padding: 15px 0;
+    display: block;
+}
+
+.form-login .link a {
+    color: #1E1E1E;
+    font-weight: 500;
+}
+
+
+@media only screen and (max-width : 997px) {
+    .navbar {
+        display: none;
+    }
+
+    #icon-menu {
+        display: block;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+}

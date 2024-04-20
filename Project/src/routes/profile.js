@@ -1,0 +1,13 @@
+const express = require("express");
+const router = express.Router();
+const profileController = require("../controllers/ProfileController");
+const { storage, upload } = require("./lib/multer");
+router.post("/updateProfile/:id", upload.single("userImage"), profileController.updateProfile);
+router.get("/changePassword", profileController.changePassword);
+router.post("/changePassword", profileController.handleChangePassword);
+router.get("/exchange", profileController.exchange);
+router.post("/exchange-point/:id", profileController.exchangePoint);
+router.get("/my-voucher", profileController.myVoucher);
+router.get("/my_order", profileController.my_order);
+router.get("/", profileController.profile);
+module.exports = router;

@@ -1,0 +1,71 @@
+<section>
+	<div class="wrapper">
+		<div class="card-left">
+			<div class="card-item">
+				<h3>Cập nhật sản phẩm</h3>
+				<form
+					method="POST"
+					action="/admin/{{valueInput._id}}?_method=PUT"
+					enctype="multipart/form-data"
+				>
+					<label for="">Tên sản phẩm :</label><br />
+					<input
+						type="text"
+						placeholder="Tên sản phẩm"
+						value="{{valueInput.name}}"
+						name="name"
+					/><br />
+					<label for="">Giá :</label><br />
+					<input
+						type="text"
+						placeholder="Nhập giá sản phẩm"
+						value="{{valueInput.price}}"
+						name="price"
+					/><br />
+					<label for="">Mô tả :</label><br />
+					<input
+						type="text"
+						placeholder="Nhập mô tả "
+						value="{{valueInput.description}}"
+						name="description"
+					/><br />
+					<label for="">Hình ảnh :</label><br />
+					<input type="file" name="image" value="{{valueInput.image}}" /><br />
+					<button id="btn" type="submit">Cập nhật sản phẩm</button>
+				</form>
+			</div>
+		</div>
+		<div class="card-right">
+			<table class="card-list" border="1" id="hideLine">
+				<thead>
+					<tr>
+						<th>Tên sản phẩm</th>
+						<th>Hình ảnh</th>
+						<th>Giá</th>
+						<th>Mô Tả</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each productList}}
+						<tr>
+							<td>{{this.name}}</td>
+							<td><img src="/img/{{this.image}}" alt="" class="img-admin" /> </td>
+							<td class="price-admin">{{this.price}} $</td>
+							<td>{{this.description}}</td>
+							<td class="action">
+
+								<button
+									class="bx bx-trash"
+									onclick="deleteItem('{{this._id}}')"
+								></button>
+								<a href="/admin/{{this._id}}/edit">
+									<i class="bx bx-edit-alt"></i></a>
+							</td>
+						</tr>
+					{{/each}}
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</section>

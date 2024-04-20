@@ -1,0 +1,18 @@
+<section id="my_order">
+	<div id="box_order">
+		{{#each orderList}}
+		<div id="box_state">
+			<p>Đơn hàng {{@index}}</p>
+		   <span id="order_state">Trạng thái : {{lookup ../statusList @index}}</span>
+		</div>
+			{{#each this}}
+				<div class="orderList">
+					<img src="../img/{{image}}" alt="Product Image" width="100px" height="100px" />
+					<span id="text">{{name}}</span>
+					<span>Số lượng: {{quantity}}</span>
+					<span>Giá : {{price}} $</span>					
+				</div>
+			{{/each}}
+		{{/each}}
+	</div>
+</section>

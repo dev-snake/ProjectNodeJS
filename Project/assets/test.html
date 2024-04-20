@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			body {
+				box-sizing: border-box;
+			}
+			img {
+				max-width: 100%;
+				border-radius: 1rem;
+			}
+			.grid-container {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				grid-gap: 1rem;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="grid-container">
+			<div class="box">
+				<img src="../src/public/img/dog.jpg" alt="" />
+			</div>
+			<div class="box">
+				<img src="../src/public/img/dog.jpg" alt="" />
+			</div>
+			<div class="box">
+				<img src="../src/public/img/dog.jpg" alt="" />
+			</div>
+			<div class="box">
+				<img src="../src/public/img/dog.jpg" alt="" />
+			</div>
+		</div>
+	</body>
+</html>

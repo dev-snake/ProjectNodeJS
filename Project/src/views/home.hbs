@@ -1,0 +1,113 @@
+<section id="home" class="home">
+    <div class="home-infor">
+        <h2 class="title">Beats Studio Buds</h2>
+        <span class="price-home">240$</span>
+        <p class="description">One-Touch parring for Apple Android</p>
+        <button class="btn"><i class="bx bx-shopping-bag"></i> Buy Now</button>
+    </div>
+    <div class="home-image">
+        <img src="../img/buds.png" alt="" class="moveImage" />
+    </div>
+</section>
+<section id="service" class="service">
+    <span class="title">Dịch Vụ Dành cho bạn</span>
+    <div class="container-service">
+        <div class="service-icon">
+            <img src="../img/clients.png" alt="" /><br />
+            <span>Làm Việc 24/24</span>
+        </div>
+        <div class="service-icon">
+            <img src="../img/business.png" alt="" /><br /><span>Dịch vụ Xuất Sắc</span>
+        </div>
+        <div class="service-icon">
+            <img src="../img/delivered.png" alt="" /><br /><span>Giao Hàng Thần tốc</span>
+        </div>
+        <div class="service-icon">
+            <img src="../img/awards.png" alt="" /><br /><span>Đánh Giá tốt</span>
+        </div>
+    </div>
+</section>
+<section id="product" class="product">
+    <span class="title">Danh sách sản phẩm</span>
+    <div class="box-container">
+        {{#each products}}
+            <div class="box">
+                <form method="POST" action="/cart/addToCart/{{this._id}}">
+                    <div class="box-image">
+                        <a href="/product/{{this.slug}}">
+                            <img src="../img/{{this.image}}" alt="" /></a>
+                    </div>
+                    <span class="price text">Giá : {{this.price}}$</span>
+                    <a href="/product/{{this.slug}}">
+                        <span class="name text">Tên sản phẩm : {{this.name}}</span></a>
+                    <button id="btn" type="submit">Mua ngay</button>
+                </form>
+            </div>
+        {{/each}}
+
+    </div>
+    <div class="image-banner">
+        <img
+            src="https://cdn.dribbble.com/userupload/11467008/file/original-395dc4f5c1df68bf4541e88b96e60730.jpg?resize=752x423"
+            alt=""
+            class="banner-left"
+        />
+        <img
+            src="https://cdn.dribbble.com/userupload/11327575/file/original-8e67b30856eb0c68c10b6f5c88ee17ef.png?resize=1024x597"
+            alt=""
+            class="banner-right"
+        />
+    </div>
+    <h2 class="featured-title">Sản Phẩm bán chạy</h2>
+    <div class="box-container">
+        {{#each bestSelling}}
+            <div class="box">
+                <form method="POST" action="/cart/addToCart/{{this._id}}">
+                    <span class="bestSelling"><i class="bx bx-purchase-tag-alt"></i> Bán chạy</span>
+                    <div class="box-image">
+                        <a href="/product/{{this.slug}}">
+                            <img src="../img/{{this.image}}" alt="" /></a>
+
+                    </div>
+                    <span class="price text">Giá : {{this.price}}$</span>
+                    <a href="/product/{{this.slug}}">
+                        <span class="name text">Tên sản phẩm : {{this.name}}</span></a>
+                    <button id="btn" type="submit">Mua ngay</button>
+                </form>
+            </div>
+        {{/each}}
+    </div>
+    <h2 class="featured-title">Sản Phẩm Nhiều lượt xem</h2>
+    <div class="box-container">
+        {{#each productsWithManyViews}}
+            <div class="box">
+                <form method="POST" action="/cart/addToCart/{{this._id}}">
+                    <span class="bestSelling"><i class="fa-regular fa-eye"></i>
+                        Nhiều lượt xem</span>
+                    <div class="box-image">
+                        <a href="/product/{{this.slug}}">
+                            <img src="../img/{{this.image}}" alt="" /></a>
+
+                    </div>
+                    <span class="price text">Giá : {{this.price}}$</span>
+                    <a href="/product/{{this.slug}}">
+                        <span class="name text">Tên sản phẩm : {{this.name}}</span></a>
+                    <button id="btn" type="submit">Mua ngay</button>
+                </form>
+            </div>
+        {{/each}}
+    </div>
+    <div>
+        <div class="banner-auth">
+            <div class="banner-auth-left">
+                <h3>Ready to use Event By Sycammore ?</h3>
+                <p>Explore the endless possidle of hosting your next event like a pro with Events by
+                    sycamere</p>
+            </div>
+            <div class="banner-auth-right">
+                <button id="btn-left">Sign In</button>
+                <button id="btn-right">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</section>

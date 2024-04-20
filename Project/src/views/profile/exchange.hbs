@@ -1,0 +1,39 @@
+<section id="exchangeVoucher">
+    <div class="PageLayout_header">
+        <div class="ShopBannerSummary">
+            <div class="ShopBannerSummary-vouchers">
+                <div class="ShopBannerSummary-vouchers-title">
+                    <span class="sp-title-point"> Points :</span>
+                </div>
+                <div class="ShopBannerSummary-vouchers-data">{{point}}
+                    <i class="bx bxl-bitcoin"></i></div>
+            </div>
+            <div class="ShopBannerSummary-my-voucher">
+                <a href="/profile/my-voucher" class="sp-my-voucher"> My Voucher</a>
+            </div>
+        </div>
+    </div>
+    <div class="PageLayout_content">
+        <div class="ShopItemListView">
+            <div class="ShopItemListView-list">
+                {{#each voucherList}}
+                    <div class="ShopItemCard">
+                        <img src="../../img/{{this.image}}" alt="" class="ShopItemCard-image" />
+                        <div class="ShopItemCard-main">
+                            <div class="ShopItemCard-title">{{this.title}}</div>
+                        </div>
+                        <div class="ShopItemCard-footer">
+                            <div class="ShopItemCard-points"><i class="bx bxl-bitcoin"></i>
+                                {{this.exchange_value}}
+                                point</div>
+                            <form action="/profile/exchange-point/{{this._id}}" method="POST">
+                                <button class="bn_button">Exchange</button>
+                            </form>
+                        </div>
+                    </div>
+                {{/each}}
+
+            </div>
+        </div>
+    </div>
+</section>

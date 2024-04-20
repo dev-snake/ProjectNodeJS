@@ -1,0 +1,47 @@
+<section>
+    <div id="order_list">
+        <p class="title_infor">Thông tin Người dùng</p>
+        <div class="container_table">
+            <table class="container_list" border="1">
+                <thead id="table_head">
+                    <tr>
+                        <th>Hình đại diện</th>
+                        <th>Họ và tên</th>
+                        <th>email</th>
+                        <th>Địa chỉ</th>
+                        <th>Điểm tiêu dùng</th>
+                        <th>Vai trò</th>
+                        <th>Trạng thái</th>
+                        <th>Xác nhận</th>
+                    </tr>
+                </thead>
+                <tbody id="table_body">
+                    {{#each userList}}
+                        <tr>
+                            <td><img
+                                    src="../img/{{this.userImage}}"
+                                    alt=""
+                                    class="userImage"
+                                /></td>
+                            <td>{{this.fullname}}</td>
+                            <td> <span id="text_email">{{this.email}}</span></td>
+                            <td>{{this.address}} </td>
+                            <td>{{this.point}}</td>
+                            <td>{{this.role}} </td>
+                            <td><span class="order_status"> {{this.user_status}}</span> </td>
+                            <td id="handleAuth">
+                                {{!-- <form action="user_manager/open/{{this._id}}" method="POST">
+									<button id="open">Mở</button>
+								</form> --}}
+                                <form action="user_manager/lock-up/{{this._id}}" method="POST">
+                                    <button id="lock-up">Khóa</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</section>

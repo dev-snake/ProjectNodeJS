@@ -1,0 +1,90 @@
+<section id="block_infor">
+	<div class="infor_payment">
+		<form class="box_voucher" action="/cart/infor_older_voucher" method="POST">
+			<input
+				type="text"
+				class="box_input_voucher"
+				placeholder="Nhập mã giảm giá (chỉ áp dụng 1 lần)"
+				name="voucher_code"
+			/>
+			<button class="btn_voucher">Áp dụng</button>
+		</form>
+		{{! infor odler }}
+		<form action="/cart/payment" method="POST">
+			<input
+				type="hidden"
+				id="fullnameInput"
+				name="fullname"
+				value="{{customerOlder.fullname}}"
+			/>
+			<input
+				type="hidden"
+				id="phonenumberInput"
+				name="phonenumber"
+				value="{{customerOlder.phonenumber}}"
+			/>
+			<input type="hidden" id="emailInput" name="email" value="{{customerOlder.email}}" />
+			<input type="hidden" id="cityInput" name="city" value="{{customerOlder.city}}" />
+			<input
+				type="hidden"
+				id="districtInput"
+				name="district"
+				value="{{customerOlder.district}}"
+			/>
+			<input type="hidden" name="total" value="{{sum}}" />
+			<div class="box_infor_older">
+				<p>Thông tin đặt hàng</p>
+				<span>người nhận :{{customerOlder.fullname}}</span>
+				<span>Số điện thoại : {{customerOlder.phonenumber}}</span>
+				<span>Email : {{customerOlder.email}}</span>
+				<span>Giao đến : {{customerOlder.city}} , {{customerOlder.district}}</span>
+				<span>Tổng tiền : {{sum}} $ </span>
+			</div>
+			<div class="payment_quote">
+				<p>Chọn phương thức thanh toán</p>
+				<div class="payment_quote_box">
+					<div class="item">
+						<input type="radio" name="paymentMethod" value="zalopay" id="zalopay" />
+						<span>Thanh toán qua </span>
+						<img
+							src="https://cdn2.cellphones.com.vn/x/media/logo/gw2/zalopay.png"
+							alt=""
+						/>
+					</div>
+					<div class="item">
+						<input type="radio" name="paymentMethod" value="momo" id="zalopay" />
+						<span>Thanh toán qua </span>
+						<img
+							src="https://cdn2.cellphones.com.vn/x/media/logo/gw2/momo_vi.png"
+							alt=""
+						/>
+					</div>
+					<div class="item">
+						<input type="radio" name="paymentMethod" value="shopeepay" id="" />
+						<span>Thanh toán qua </span>
+						<img
+							src="https://cdn2.cellphones.com.vn/x/media/logo/gw2/shopeepay.png"
+							alt=""
+						/>
+					</div>
+					<div class="item">
+						<input type="radio" name="paymentMethod" value="vnpay" id="" />
+						<span>Thanh toán qua </span>
+						<img
+							src="https://cdn2.cellphones.com.vn/x/media/logo/gw2/vnpay.png"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+			{{! btn thanh toán }}
+			<div class="container_total_voucher">
+				<div class="total_box">
+					<span class="total_temp">Tổng tiền tạm tính : </span>
+					<span class="total">{{sum}} $</span>
+				</div>
+				<button class="btn_payment" type="submit">Tiếp tục</button>
+			</div>
+		</form>
+	</div>
+</section>

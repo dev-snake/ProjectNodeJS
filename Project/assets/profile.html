@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="./css/profile.css" />
+	</head>
+	<body>
+		<header style="background-color: beige">
+			<a href="" class="logo">logo</a>
+			<i class="bx bx-menu" id="icon-menu"></i>
+			<ul class="navbar">
+				<li><a href="">Trang chủ</a></li>
+				<li><a href="">Sản phẩm </a></li>
+				<li><a href="">Liên hệ</a></li>
+			</ul>
+			<div class="header-icons">
+				<i class="bx bx-search-alt-2"></i>
+				<i class="bx bx-cart"></i>
+				<i class="bx bx-user" id="icon-user"></i>
+			</div>
+			<div class="box-auth" id="box-auth">
+				<span><i class="bx bx-log-in"></i> Đăng nhập</span>
+				<span><i class="bx bx-user-plus"></i> Đăng kí</span>
+			</div>
+		</header>
+		<section id="profile" class="profile">
+			<form class="contentProfile" action="">
+				<!-- Profile info -->
+				<div id="inforUser">
+					<img src="../img/shop5.png" alt="" id="userImage" /><br />
+					<span>username</span>
+				</div>
+				<input
+					type="text"
+					placeholder="Họ và tên"
+					value="{{userProfile.name}}"
+					id="fullname"
+				/>
+				<hr id="lineProfile" />
+				<input type="email" placeholder="Email:" id="email" />
+				<hr id="lineProfile" />
+				<input type="text" placeholder="Số điện thoại" id="phonenumber" />
+				<hr id="lineProfile" />
+				<input type="text" placeholder="Địa chỉ" id="address" />
+				<hr id="lineProfile" />
+				<input type="text" placeholder="Đổi mật khẩu" id="changePassword" />
+				<hr id="lineProfile" />
+				<button id="updateProfile">Cập nhật thông tin</button>
+			</form>
+		</section>
+	</body>
+</html>
